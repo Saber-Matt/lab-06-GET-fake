@@ -1,0 +1,19 @@
+name: Node.js CI
+
+on:
+push:
+    branches: [ main, dev ]
+pull_request:
+    branches: [ main, dev ]
+
+jobs:
+build:
+    runs-on: ubuntu-latest
+    container: node:latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci
+    - run: npx eslint .
+    - run: npm test -- --passWithNoTests
+    env:
+        CI: true
