@@ -1,0 +1,29 @@
+{
+  "name": "lab-06-GET-fake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "lint": "eslint .",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --verbose --runInBand",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saber-Matt/lab-06-GET-fake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saber-Matt/lab-06-GET-fake/issues"
+  },
+  "homepage": "https://github.com/Saber-Matt/lab-06-GET-fake#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
