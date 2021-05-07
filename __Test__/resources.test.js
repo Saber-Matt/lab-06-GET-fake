@@ -78,7 +78,7 @@ test('GET cats', async () => {
   expect(response.body).toEqual(expected);
 })
 
-test('GET cats', async () => {
+test('GET single cat in array', async () => {
   const response = await request.get('/api/cats/1');
   const expected = {
     name: 'Felix',
