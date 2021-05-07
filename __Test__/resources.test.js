@@ -77,3 +77,18 @@ test('GET cats', async () => {
   expect(response.status).toBe(200);
   expect(response.body).toEqual(expected);
 })
+
+test('GET cats', async () => {
+  const response = await request.get('/api/cats/1');
+  const expected = {
+    name: 'Felix',
+    type: 'Tuxedo',
+    url: 'cats/felix.png',
+    year: 1892,
+    lives: 3,
+    isSidekick: false
+  };
+
+  expect(response.status).toBe(200);
+  expect(response.body).toEqual(expected);
+});
